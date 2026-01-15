@@ -1,0 +1,74 @@
+Journal.cs
+ 
+What it does:
+Stores all journal entries in a list.
+Contains methods to add entries, display them, save to a file, and load from a file.
+ 
+Key points / fixes:
+ 
+The list of entries (_entries) must be initialized; otherwise, trying to add something will crash the program.
+All methods are empty stubs, which is correct for Week 2.
+Using a constructor to initialize the list ensures the program builds and runs safely.
+ 
+ 
+--------------------------------------
+ 
+ 
+ 
+Entry.cs
+ 
+What it does:
+ 
+Represents a single journal entry.
+Holds the date, the prompt used, and the text of the entry.
+Can display itself (date, prompt, and text).
+ 
+Key points / fixes:
+ 
+Variable naming should match the design (e.g., _promptText) for consistency.
+The Display method is correct and follows object-oriented principles: each entry handles its own display.
+No other changes needed because this class is simple and matches the mentor’s design.
+ 
+ 
+ 
+------------------------------------------
+ 
+ 
+PromptGenerator.cs
+ 
+What it does:
+ 
+Stores a list of prompts that can be used for journal entries.
+Provides a method to return a random prompt.
+ 
+Key points / fixes:
+ 
+The list of prompts (_prompt) must be initialized; otherwise, adding prompts will crash.
+The random prompt method is correct and doesn’t need changes.
+Initialization is the only required fix to make the class safe to use.
+ 
+ 
+ 
+ 
+-----------------------------------------
+ 
+ 
+ 
+Program.cs
+ 
+What it does:
+ 
+Handles user interaction.
+Shows a menu with options to write an entry, display entries, load/save, and exit.
+Calls other classes to do the work.
+ 
+Key points / fixes:
+ 
+The PromptGenerator must be instantiated correctly before use.
+userInput must be declared before the loop to avoid compile errors.
+Console.ReadLine() must be spelled correctly (case-sensitive).
+Minor cleanup like removing incorrect Console.Write() ensures the program builds without errors.
+The loop structure and menu display are correct for a stub program.
+ 
+------------------------------------------------------
+ 

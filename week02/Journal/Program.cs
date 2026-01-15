@@ -16,7 +16,7 @@ class Program
  
         while (userInput != "5")
         {
-            Console.Clear();
+
             Console.WriteLine("1. Write Entry");
             Console.WriteLine("2. Display");
             Console.WriteLine("3. Load");
@@ -33,6 +33,7 @@ class Program
             }
             else if (userInput == "2")
             {
+                
             }
             else if (userInput == "3")
             {

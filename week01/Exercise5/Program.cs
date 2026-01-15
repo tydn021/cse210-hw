@@ -29,7 +29,7 @@ class Program
 
     static int PromptUserNumber()
     {
-        Console.Write("What is your humber?: ");
+        Console.Write("What is your number?: ");
         int number = int.Parse(Console.ReadLine());
 
         return number;

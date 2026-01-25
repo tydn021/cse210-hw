@@ -21,9 +21,43 @@ public class Scripture
 
     public void HideRandomWords(int numberToHide)
     {
-        Word shownWords = new Word();
+        Random random = new Random();
+        // List<Word> shownWords = new List<Word>();
 
-        foreach 
+        // foreach (Word word in _words)
+        // {
+        //     if (! word.IsHidden())
+        //     {
+        //         shownWords.Add(word);
+        //     }
+        // }
+        
+        // for (int i = numberToHide; i < shownWords.Count; i++)
+        //     {
+                
+        //     }
+
+        //     int randomIndex = random.Next(shownWords.Count);
+        int hiddenCount = 0;
+
+        int randomIndex = random.Next(_words.Count());
+
+        while (hiddenCount < numberToHide)
+        {
+            
+            if(! word.IsHidden())
+            {
+                foreach (Word word in _words)
+                {
+                    word.Hide();
+                }
+            }
+            
+        }
+            
+
+
+        
     }
 
     public string GetDisplayText()

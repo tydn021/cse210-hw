@@ -7,7 +7,7 @@ public class Scripture
 
     public Scripture(Reference reference, string words)
     {
-        _reference = reference; 
+        _reference = reference;
 
         string[] parts = words.Split(" ");
 
@@ -31,38 +31,33 @@ public class Scripture
         //         shownWords.Add(word);
         //     }
         // }
-        
+
         // for (int i = numberToHide; i < shownWords.Count; i++)
         //     {
-                
+
         //     }
 
         //     int randomIndex = random.Next(shownWords.Count);
         int hiddenCount = 0;
 
-        int randomIndex = random.Next(_words.Count());
 
         while (hiddenCount < numberToHide)
         {
-            
-            if(! word.IsHidden())
+            int randomIndex = random.Next(_words.Count());
+
+            if (!_words[randomIndex].IsHidden())
             {
-                foreach (Word word in _words)
-                {
-                    word.Hide();
-                }
+                _words[randomIndex].Hide();
+
+                hiddenCount++;
             }
-            
+
         }
-            
-
-
-        
     }
 
     public string GetDisplayText()
-    {}
+    { }
 
     public bool IsCompletelyHidden()
-    {}
+    { }
 }

@@ -8,7 +8,6 @@ class Program
         Console.WriteLine("Hello World! This is the ScriptureMemorizer Project.");
 
         string userInput = "";
-        int numberToHide = 3;
 
         Reference reference = new Reference("Proverbs", 3, 5, 6);
 
@@ -22,21 +21,13 @@ class Program
 
         userInput = Console.ReadLine();
 
-        while (userInput != "Quit" && scripture.IsCompletelyHidden())
+        while (userInput != "Quit" || scripture.IsCompletelyHidden())
         {
+            scripture.HideRandomWords(3);
             Console.Clear();
-
             Console.WriteLine(scripture.GetDisplayText());
-
+            userInput = Console.ReadLine();
             Console.ReadKey();
-
-
-
-
-
-
-
-
         }
     }
 }

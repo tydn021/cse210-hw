@@ -56,8 +56,25 @@ public class Scripture
     }
 
     public string GetDisplayText()
-    { }
+    {
+       string scripture = "";
+       foreach (Word word in _words)
+        {
+            scripture += word.GetDisplayText();
+            scripture += " ";
+        }
+       return $"{_reference.GetDisplayText()}: {scripture}";
+    }
 
     public bool IsCompletelyHidden()
-    { }
+    {
+        foreach (Word word in _words)
+        {
+            if (! word.IsHidden())
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 }

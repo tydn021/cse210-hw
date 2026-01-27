@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-public class Word()
+public class Word
 {
     private string _text;
     private bool _isHidden;

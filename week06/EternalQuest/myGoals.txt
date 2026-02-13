@@ -1,0 +1,6 @@
+170
+ChecklistGoal:Clean room x2|Clean my room twice this week.|20|2|2|100
+SimpleGoal:Clean laundry|Do my laundry today.|10|True
+SimpleGoal:fix this program|fix this program|10|False
+SimpleGoal:Make my bed|10|10|False
+SimpleGoal:Get food|Get some food to eat|30|True
